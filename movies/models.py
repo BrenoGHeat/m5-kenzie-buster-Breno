@@ -15,7 +15,7 @@ class Movie(models.Model):
     title = models.CharField(max_length=127)
     duration = models.CharField(max_length=10, blank=True, default="")
     rating = models.CharField(max_length=20, choices=RatingChoices.choices, default=RatingChoices.G)
-    synopsis = models.CharField(blank=True, default="")
+    synopsis = models.TextField(blank=True, default="")
 
     user = models.ForeignKey(
         "users.User",

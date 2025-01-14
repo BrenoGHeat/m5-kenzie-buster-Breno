@@ -4,7 +4,7 @@ from rest_framework.response import Response
 from rest_framework_simplejwt.authentication import JWTAuthentication
 from users.permissions import IsAdminOrReadOnly
 from users.serializers import UserSerializer
-from .serializers import CustomJWTSerializer
+
 
 # Create your views here.
 
