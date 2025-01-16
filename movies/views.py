@@ -15,7 +15,7 @@ class MovieView(APIView, PageNumberPagination):
     permission_classes = [IsAdminOrReadOnly]
 
     def get(self, request):
-        movies = Movie.objects.all()
+        movies = Movie.objects.all().order_by("id")
 
         result_page = self.paginate_queryset(movies, request, view=self)
 
